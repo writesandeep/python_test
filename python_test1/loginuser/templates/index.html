@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-{% load static %}
-<html ng-app="BasicHttpAuthExample">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+{% load staticfiles %}
+<html>
 
   <head>
     <meta charset="utf-8" />
-        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'% }">
+        <!-- <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'% }"/> -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
   </head>
 
-  <body>
-    <div class="container">    
-      <div class="navbar">
-        <ul class="nav navbar-nav">      
-          <li><a href='#/home'>Home</a></li>
-          <li><a href='#/login'>Login</a></li>
-          <li><a href='#/contact'>Contact Us</a></li>
-        </ul>
-      <div ng-view></div>
-      </div>
-      
+  <body ng-app="BasicHttpAuthExample">
+    <div class="fixed-header">
+       <header id="header-section" >
+          <div class="container">    
+            <div class="header-right">
+              <div class="top-nav">
+                <ul>      
+                  <li><a href='#/home'>Home</a></li>
+                  <li><a href='#/login'>Login</a></li>
+                  <li><a href='#/register'>SignUp</li>
+                  <li><a href='#/contact'>Contact Us</a></li>
+                </ul>
+              </div>  
+            </div>
+          </div>
+        </header>
     </div>
+    <div ng-view></div>
 
 
 

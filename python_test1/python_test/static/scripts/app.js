@@ -24,11 +24,15 @@ app.config(['$routeProvider', function ($routeProvider) {
             controller: 'HomeController',
             templateUrl: 'static/uitemplates/home.html'
         })
+        .when('/register', {
+            controller: 'SignupController',
+            templateUrl: 'static/uitemplates/registeration.html'
+        })
         .when('/contact', {
             controller: 'ContactController',
             templateUrl: 'static/uitemplates/contact.html'
         })
-        // .otherwise({ redirectTo: '/login' });
+        .otherwise({ redirectTo: '/login' });
 }])
 
 app.controller('LoginController',function($scope, $http){
