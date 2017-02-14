@@ -1,0 +1,14 @@
+<!-- <h1>Login Page</h1>
+<p>{{ message }}</p> -->
+<div ng-controller = "LoginController">
+    <form name="form" ng-submit="login()" role="form">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" ng-model="user.username" required />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="user.password" required />
+            <button type="submit"  class="btn btn-danger">Login</button>
+            <button type="Register" class="btn btn-danger">Register</button>
+        </div>
+    </form>
+</div>
